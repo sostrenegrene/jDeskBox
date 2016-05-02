@@ -1,0 +1,66 @@
+.employee-list {
+    height:500px;
+    width:100%;
+    overflow-y:scroll;
+}
+
+.employee {
+    font-size:1em;
+    width:300px;
+    border:1px solid;
+    margin:1px;
+    padding:1px;
+}
+
+.employee td {
+    border:0px solid;
+}
+
+.call-btn {
+    border-radius:3px;
+    border:1px solid #999;
+    /* background-color:#00ea00; */
+    text-decoration:none;
+    padding:2px;
+    color:#000;
+    width:50px;
+}
+
+.employee .call {
+    width:50px;
+}
+
+.employee .name {
+}
+
+.presence {
+    width:2em;
+    border-radius:0px;
+    text-align:center;
+}
+
+.available {
+    background-color:#00ea00;
+    cursor: pointer;
+}
+
+.busy {
+    background-color:#ff0000;
+}
+
+.ringing {
+    background-color:#00ffff;
+}
+
+.do_not_disturb {
+    background-color:#ff8000;
+}
+
+.unknown {
+    background-color:#ccc;
+    cursor: pointer;
+}
+
+.hide {
+    display:none;
+}

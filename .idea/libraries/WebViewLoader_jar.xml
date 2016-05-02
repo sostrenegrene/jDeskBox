@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="WebViewLoader_jar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../WebViewLoader/out/artifacts/WebViewLoader_jar" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../WebViewLoader/out/artifacts/WebViewLoader_jar" recursive="false" />
+  </library>
+</component>

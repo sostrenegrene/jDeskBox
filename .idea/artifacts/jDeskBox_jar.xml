@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="jDeskBox:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/jDeskBox_jar</output-path>
+    <root id="archive" name="jDeskBox.jar">
+      <element id="module-output" name="jDeskBox" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../ToolsLib/out/artifacts/ToolsLib_jar/ToolsLib.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../WebViewLoader/out/artifacts/WebViewLoader_jar/WebViewLoader.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

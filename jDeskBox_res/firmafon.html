@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Firmafon Softpohone</title>
+
+    <link rel="stylesheet" type="text/css" href="system/style/jDeskBox.css">
+    <link rel="stylesheet" type="text/css" href="plugins/firmafon/firmafon.css">
+
+    <script type="text/javascript" src="system/javascript/system.js"></script>
+    <script type="text/javascript" src="system/javascript/DeskBox.js"></script>
+    <script type="text/javascript" src="system/javascript/jquery/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="system/javascript/AJAXLoader.js"></script>
+    <script type="text/javascript" src="system/javascript/InputGetter.js"></script>
+
+
+    <!-- INSERT PLUGIN SCRIPTS HERE -->
+    <script type="text/javascript" src="plugins/firmafon/firmafon.js"></script>
+    <script type="text/javascript" src="plugins/firmafon/CallHandler.js"></script>
+    <script type="text/javascript" src="plugins/firmafon/Firmafon_CallHandler.js"></script>
+    <script type="text/javascript" src="plugins/firmafon/employees_loader.js"></script>
+    <script type="text/javascript" src="plugins/firmafon/employee.js"></script>
+
+
+    <style type="text/css">
+	</style>
+    <script type="text/javascript">
+        var firmafon = new FirmafonHandler();
+        var callHandler;
+        firmafon.add_Loader( new Firmafon_EmployeesLoader("#employee_list") );
+        firmafon.preloader(function() {
+            firmafon.loader();
+
+            callHandler = new Firmafon_CallHandler();
+        });
+    </script>
+</head>
+<body>
+
+<table class="table_main">
+    <tr>
+        <td id="local_employee">
+            <!-- Authenticated employee data here -->
+        </td>
+    </tr>
+    <tr>
+        <td id="active_call" class="hide">
+            <!-- Active call data here -->
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td>
+                        <input id="search" type="text" name="number" placeholder="Search" size="10">
+                    </td>
+                    <td>
+                        <form id="dialpad">
+                            <input type="text" name="number" placeholder="Dialpad" size="10" >
+                            <input type="submit" value="Call" class="call-btn available">
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="employee-list" id="employee_list"></div>
+        </td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+    firmafon.search("#search");
+    inget.submit("#dialpad",function(data) {
+        var number = data.split("=");
+        number = number[1];
+
+        firmafon.dial(number);
+    });
+</script>
+</body>
+</html>

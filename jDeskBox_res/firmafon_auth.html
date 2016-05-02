@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script type="text/javascript" src="system/javascript/DeskBox.js"></script>
+    <script type="text/javascript" src="system/javascript/jquery/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="system/javascript/AJAXLoader.js"></script>
+
+    <script type="text/javascript">
+        DeskBox.ready(function() {
+
+            //Test if token is present
+            if (jFirmafon.has_auth() == false) {
+
+                //Fetch token from oauth endpoint
+                xLoader.get("http://mudlogic.dk/Apps/OAuth/?profile=firmafon",function(data) {
+                    $("body").html(data);
+                });
+
+            }
+            //Return to index page
+            else {
+                jSystem.load("firmafon.html");
+            }
+
+
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
